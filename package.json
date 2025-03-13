@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.16",
+    "axios": "^1.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "leads": [
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "victor",
+        "victor@live.com",
+        "quero muito comprar um carro",
+        "sim, sempre estou pronto",
+        "100000 mil"
+      ],
+      "status": "qualificado"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "hugo",
+        "xhugo@live.com",
+        "carros",
+        "sim",
+        "50mil"
+      ],
+      "status": "qualificado"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "livia",
+        "livia@live.com",
+        "carros",
+        "sim, quero um onix",
+        "40mil"
+      ],
+      "status": "qualificado"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "victor",
+        "xhugo@live.com",
+        "comprar o carro top, um camaro",
+        "estou sim",
+        "mais de 100mil"
+      ],
+      "status": "qualificado"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "victor",
+        "xg@live.com",
+        "comprar um celta tunado",
+        "estou sim",
+        "estou com 30mil"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\nresumo: o usuário demonstra claramente interesse em um produto específico (celta tunado) e está pronto para comprar, indicando um alto potencial de conversão."
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "victor",
+        "xhugo@live.com",
+        "motos",
+        "sim",
+        "10mil"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\nresumo: o usuário, victor, demonstra interesse em motos e está pronto para comprar, indicando um alto potencial de conversão.",
+      "platform": "whatsapp"
+    },
+    {
+      "userId": "user_dtqd9joso",
+      "answers": [
+        "oi",
+        "xupa@fodas.c",
+        "comprar uma kombi veia",
+        "sim",
+        "10mil"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\no lead demonstra claramente interesse em comprar uma kombi veia, com um orçamento de 10 mil reais, indicando um alto nível de interesse e potencial de compra.",
+      "platform": "web"
+    },
+    {
+      "userId": "user_dtqd9joso",
+      "answers": [
+        "sim",
+        "xx@live.com",
+        "não quero nada",
+        "não, odeio gastar",
+        "to sem dinheiro"
+      ],
+      "status": "qualificado",
+      "reason": "não qualificado.\n\nresumo: a resposta indica forte resistência à compra, demonstrando falta de interesse e preocupação com o custo.",
+      "platform": "web"
+    },
+    {
+      "userId": "user_ynp7dwepb",
+      "answers": [
+        "bora",
+        "x@bosta.com",
+        "nenhum, quero nada",
+        "nada to guardando",
+        "0 reais"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica que o usuário não demonstra interesse em produtos ou serviços, e não há informações que sugiram que ele esteja pronto para comprar.",
+      "platform": "web"
+    },
+    {
+      "userId": "user_n8niv39bx",
+      "answers": [
+        "victor",
+        "xh@live.com",
+        "em nada",
+        "não, to suave",
+        "1 real"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica que o lead não está interessado em nenhum produto específico, o que sugere que ele não está pronto para comprar.",
+      "platform": "web"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "vitão no whatsapp",
+        "vitao@dozap.com",
+        "comprar casa top",
+        "estou sim",
+        "to com pouca grana, mas vou financiar"
+      ],
+      "status": "qualificado",
+      "reason": "**qualificado**\n\no lead demonstra interesse claro e concreto em comprar uma casa, indicando um potencial de compra significativo. as informações fornecidas (nome, email e interesse) são relevantes para a qualificação do lead como um potencial cliente.",
+      "platform": "whatsapp"
+    }
+  ]
+}
