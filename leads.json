@@ -133,6 +133,221 @@
       "status": "qualificado",
       "reason": "**qualificado**\n\no lead demonstra interesse claro e concreto em comprar uma casa, indicando um potencial de compra significativo. as informações fornecidas (nome, email e interesse) são relevantes para a qualificação do lead como um potencial cliente.",
       "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "se quiser saber mais, visite nosso portal de privacidade:\nhttps://www.unidas.com.br/a-unidas/politica-de-privacidade",
+        "como posso te ajudar?",
+        "😔 não consegui entender. por favor selecione uma das opções no menu.\n\nvamos tentar novamente!",
+        "como posso te ajudar?",
+        "😔 não consegui entender. por favor selecione uma das opções no menu.\n\nvamos tentar novamente!",
+        "como posso te ajudar?"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: o usuário demonstra interesse em informações sobre privacidade, mas não está pronto para fazer uma compra.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "qual seu *nome*? 🤔",
+        "ops! ocorreu uma falha em nosso sistema.",
+        "antes de transferir você para nossa equipe de especialistas, vou precisar de alguns dados! 😉",
+        "qual seu *nome*? 🤔",
+        "😔 nome inválido, por favor insira um nome válido para continuarmos.",
+        "qual seu *nome*? 🤔",
+        "😔 nome inválido, por favor insira um nome válido para continuarmos."
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a conversa indica que o usuário está buscando informações sobre um produto, mas a resposta inicial é evasiva e demonstra uma abordagem de venda, o que pode ser interpretado como um sinal de que não está pronto para comprar.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "qual seu *nome*? 🤔",
+        "ops! ocorreu uma falha em nosso sistema.",
+        "antes de transferir você para nossa equipe de especialistas, vou precisar de alguns dados! 😉",
+        "qual seu *nome*? 🤔",
+        "😔 nome inválido, por favor insira um nome válido para continuarmos.",
+        "qual seu *nome*? 🤔",
+        "😔 nome inválido, por favor insira um nome válido para continuarmos."
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica que o usuário está em um processo de qualificação e está sendo solicitado informações adicionais para prosseguir com a transação. a comunicação é excessivamente promocional e não demonstra um interesse genuíno em comprar o produto.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "ops! ocorreu uma falha em nosso sistema.",
+        "agradecemos seu contato e volte sempre que precisar. 😉",
+        "olá, tudo bem? sou a carol, atendente virtual da unidas.",
+        "antes de começar, caso precise encerrar a conversa, basta digitar *sair* ou *cancelar*. 😉",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica que o usuário está buscando informações sobre um problema (falha no sistema) e, aparentemente, não está interessado em comprar o produto. a comunicação é formal e não demonstra um interesse em adquirir.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\no usuário demonstrou hesitação e falta de interesse, indicando que não está pronto para tomar uma decisão de compra.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "não consegui entender o que você digitou.\n\nvamos tentar de novo?",
+        "o unidas driver, é um produto pensado especialmente para quem trabalha como motorista de aplicativos.",
+        "ah, poxa, não consegui entender.",
+        "vamos tentar de novo?",
+        "ah, poxa, não consegui entender."
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado.\n\nresumo: a resposta indica falta de interesse e dificuldade em entender o produto, o que sugere que o lead não está pronto para comprar.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "vitão",
+        "vitao@live.com",
+        "comprar uma chevette turbo",
+        "claro, quero apostar racha na imigrantes",
+        "10mil no pix, 10 mil emprestimo no nubank e tenho 5mil no cheque especial"
+      ],
+      "status": "não qualificado",
+      "reason": "**não qualificado**\n\n**resumo:** a resposta indica um interesse inicial, mas a falta de informações sobre a necessidade específica (por que precisa da chevette turbo) e a linguagem informal (como \"apostar na imigrantes\") sugere que o lead não está pronto para a compra. é necessário entender o motivo da compra para qualificar o lead.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "558007715158@s.whatsapp.net",
+      "answers": [
+        "ah, poxa, não consegui entender.",
+        "vamos tentar de novo?",
+        "ah, poxa, não consegui entender.",
+        "ah, poxa, não consegui entender.",
+        "ah, poxa, não consegui entender."
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica dificuldade em entender o produto/serviço, o que sugere que o usuário pode não estar interessado em comprar.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "vitasso",
+        "vitasso@turbo.com",
+        "um carro, golzinho turbo que vi na loja",
+        "estou sim, to com dinheiro na conta, peguei emprestimo no nubank",
+        "30mil mais meu xeque especial"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\nresumo: a resposta indica um interesse claro em adquirir um carro e um golzinho turbo, o que sugere um alto potencial de compra. a disponibilidade financeira e a obtenção de um empréstimo bancário também são fatores positivos.",
+      "platform": "whatsapp"
+    },
+    {
+      "userId": "user_t0m4oym38",
+      "answers": [
+        "david",
+        "david@crm.com",
+        "vi que voces vendem um crm bacana",
+        "estou, meus clientes estão desorganizados",
+        "5mil por mes no maximo"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\no lead demonstra interesse claro e um problema específico (desorganização de clientes) que o crm pode resolver. a urgência em comprar (desorganização de clientes) e o orçamento definido (5mil/mês) indicam um potencial de compra.",
+      "platform": "web"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "quero muito comprar um veiculo para levar meu filho pra escola",
+        "meu antigo está muito ruim",
+        "o meu atual está muito velho",
+        "o meu atual está muito velho",
+        "o meu atual está muito velho"
+      ],
+      "status": "qualificado",
+      "reason": "**qualificado**\n\no lead demonstra claramente interesse em adquirir um veículo, o que indica um potencial de compra. a resposta \"quero muito comprar um veiculo para levar meu filho pra escola\" sugere uma necessidade e um desejo de adquirir um veículo, o que é um passo importante no processo de compra.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "answers": [
+        "vamos",
+        "100mil",
+        "gosto de carro popular bom e duravel, pensei num kwid aventureiro bem resistente e economico e pretão pra ficar mafioso",
+        "uso pra ir nas festinha da facul",
+        "eu só uso pra ir na facul igual eu falei acima, as vezes pra buscar umas namoradinha, as caracteristica pode ser igual eu falei gosto de um carro aventureiro pretão mafioso"
+      ],
+      "status": "não qualificado",
+      "reason": "**não qualificado**\n\n**resumo:** o usuário demonstra um interesse em um carro de aventura econômico e resistente, mas a resposta inicial é vaga e não fornece informações suficientes para direcionar a busca. a busca deve se concentrar em características que se alinhem com o uso principal do carro (ir às festas da faculdade) e a necessidade de um veículo confiável para o dia a dia.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "questions": [
+        "Olá! Seja bem-vindo(a) à nossa loja de carros. É um prazer te atender. Para começarmos a entender melhor suas necessidades, poderia me dizer, qual o seu objetivo ao procurar um carro novo?",
+        "Ótimo! Para começarmos a entender melhor suas necessidades, qual a sua principal prioridade ao trocar o seu carro antigo? Você está buscando algo específico, como economia de combustível, segurança, espaço ou algo mais?",
+        "Ótimo! Vamos aprofundar um pouco mais. Além da confiabilidade e conforto, e considerando que você busca um veículo para uso diário e viagens, qual o seu orçamento máximo para este carro?",
+        "Perfeito! Vamos continuar a conversa.\n\nOk, com um orçamento de R$100 mil, qual a sua prioridade principal ao escolher o carro? Você está mais focado em economia de combustível, espaço, tecnologia, design ou uma combinação desses fatores?",
+        "Ótimo! Vamos lá.\n\nAntes de eu te dar minhas sugestões, me diga, qual o seu principal objetivo ao comprar um carro? Você está procurando algo para uso diário, para viagens, ou para algo mais específico?"
+      ],
+      "answers": [
+        "quero trocar meu carro antigo",
+        "eu quero confiabilidade e conforto, pensei no kwid aventureiro",
+        "tenho 100mil",
+        "uma combinacao boa",
+        "só pra ir pra facul pegar umas gatinhas e as vezes descer pra bc pra praia"
+      ],
+      "status": "qualificado",
+      "reason": "**qualificado**\n\no lead demonstra claramente interesse em comprar um carro, com foco em necessidades de uso diário e viagens, e um orçamento de r$100 mil. a menção de \"para facul pegar umas gatinhas e as vezes descer pra bc pra praia\" indica um desejo de mobilidade e, portanto, um interesse em um veículo que atenda a essas necessidades.",
+      "platform": "whatsapp"
+    },
+    {
+      "phone": "553175705747@s.whatsapp.net",
+      "questions": [
+        "Olá! Seja bem-vindo(a) à nossa loja de carros. Para começarmos a entender melhor suas necessidades e te ajudar a encontrar o carro ideal, gostaria de fazer algumas perguntas. 😊\n\nPrimeiro, qual o seu principal objetivo ao procurar um carro novo?",
+        "Ótimo! Vamos começar com a primeira pergunta.\n\nQual a sua faixa de preço que você está considerando para um carro novo?",
+        "Ok, vamos lá!\n\nPrimeira pergunta: Qual o uso principal que você pretende dar ao carro? (Ex: uso urbano, viagens longas, trabalho, etc.)",
+        "Ok, vamos lá!\n\nPrimeira pergunta: Qual o uso principal que você pretende dar ao carro? (Ex: uso urbano, viagens longas, trabalho, etc.)",
+        "Ok, vamos lá!\n\nQual o uso principal que você pretende dar ao carro?"
+      ],
+      "answers": [
+        "quero conforto e esportividade",
+        "200mil",
+        "só pra desfilar em bc",
+        "desfilar na orla da praia",
+        "acabei de responder"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado.\n\n**resumo:** a resposta indica um foco principal em uso urbano e não há menção a viagens longas ou uso para fins de trabalho ou lazer. a busca por um carro \"para desfilar na orla da praia\" sugere um uso limitado e não prático.",
+      "platform": "whatsapp"
+    },
+    {
+      "userId": "user_41l7co18u",
+      "answers": [
+        "opa",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica que o usuário não está interessado em comprar o produto e não está pronto para a compra.",
+      "platform": "web"
     }
   ]
 }

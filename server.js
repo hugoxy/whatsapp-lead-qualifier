@@ -37,7 +37,7 @@ function saveToJson(leadData) {
 }
 
 // Lista de perguntas
-const questions = [
+let questions = [
     'Qual é o seu nome?',
     'Qual é o seu email?',
     'Qual é o seu interesse?',
@@ -50,36 +50,93 @@ const LEAD_QUALIFIED_MESSAGE = `Você é um lead qualificado. Obrigado!\n\nEm br
 const LEAD_NOT_QUALIFIED_MESSAGE = `Você é um lead não qualificado. Obrigado!\n\nQuando tiver real interesse é só me chamar.`;
 
 // Função para enviar perguntas
-async function askQuestion(sock, from, step, isWhatsApp = true) {
-    const message = { text: questions[step] };
+async function askQuestion(sock, from, step, isWhatsApp = true, input, resume) {
+    let message = { text: questions[step] };
     if (isWhatsApp) {
+        message = { text: await generateQuestion(input, resume, step) };;
         await sock.sendMessage(from, message);
     } else {
         return message.text; // Retorna a pergunta para o widget
     }
 }
 
-// Função para qualificar o lead com Ollama
+// Função Gerar Pergunta
+async function generateQuestion(input, resume, step) {
+    let prompt = `Você é um assistente de IA de loja de carros com mais de 20anos de historico na região de Contagem-MG, especializado em qualificar leads com base nas respostas do usuário. Sua tarefa é fazer cinco perguntas ao usuário para determinar se ele é um lead qualificado ou não qualificado. Um lead qualificado é alguém que demonstra interesse claro em comprar o produto, tem orçamento disponível e está em uma posição de tomar decisões de compra.
+
+    Instruções:
+
+    Lembre-se:
+    Seja educado e profissional em todas as interações, independentemente do resultado da qualificação.
+    Lembre-se mande uma pergunta de cada vez, e aguarde a resposta do usuário antes de enviar a próxima.
+    Não faça perguntas muito complexas ou que possam confundir o usuário.
+    
+    Faça Perguntas Relevantes:
+    Elabore cinco perguntas que ajudem a avaliar o interesse do usuário no produto, seu orçamento, sua urgência e sua capacidade de tomar decisões de compra.
+    Exemplos de perguntas:
+    Qual é o seu nível de interesse no nosso produto?
+    Você tem orçamento alocado para essa compra?
+    Qual é a urgência da sua necessidade?
+    Você é a pessoa responsável por tomar decisões de compra na sua organização?
+    Analise as Respostas:
+    Avalie as respostas com base em critérios claros. Por exemplo:
+    Se o usuário demonstrar alto interesse, tiver orçamento disponível e for o tomador de decisão, ele pode ser considerado um lead qualificado.
+    Se faltar algum desses elementos, ele pode ser considerado não qualificado.
+    Faça Perguntas de Acompanhamento (se necessário):
+    Caso uma resposta seja vaga ou incompleta, faça uma pergunta adicional para esclarecer e obter mais detalhes.
+    Lide com Respostas Evasivas ou Ausentes:
+    Se o usuário não responder ou fornecer uma resposta evasiva, gentilmente peça mais informações ou passe para a próxima pergunta.
+    Mantenha o Foco no Contexto:
+    Limite-se a perguntas e interações relevantes para a qualificação do lead. Se o usuário desviar do tópico ou fizer perguntas, redirecione a conversa gentilmente, explicando que você precisa dessas informações para melhor atendê-lo.
+    Seja Conversacional e Amigável:
+    Use um tom profissional, mas acolhedor, para encorajar o usuário a responder às perguntas.
+    Decida e Registre:
+    Após as cinco perguntas, decida se o usuário é um lead qualificado ou não qualificado e registre essa decisão internamente.
+    
+    Aqui está o input do usuário: **${input}**
+    Aqui está o resumo das perguntas e respostas: **${resume}**
+    `;
+    if (step > 0) {
+        prompt = `Aqui está a pergunta anterior: ${questions[step - 1]} e a reposta do usuário: ${input}, baseado nessa resposta, faça a próxima pergunta.
+        Lembre-se mande uma pergunta de cada vez, e aguarde a resposta do usuário antes de enviar a próxima.`;
+    }
+    try {
+        let response = await axios.post('http://localhost:11434/api/generate', {
+            model: 'gemma3:1b',
+            prompt: prompt,
+            stream: false
+        });
+        console.log('Instruções do Ollama:', response.data.response);
+
+        let result = response.data.response.trim();
+        questions[step] = result;
+        return result;
+    } catch (error) {
+        console.error('Erro Geracao de Pergunta:', error);
+        return "Desculpe, não entendi a pergunta.";
+    }
+}
+
+// Função Qualificar
 async function qualifyLead(answers) {
-    const prompt = `Você é um assistente de IA de um CRM, responsável por avaliar as respostas do usuário e qualificar se ele é um lead qualificado ou não qualificado baseado em suas respostas, não fuja do contexto e se limite a perguntas que são interessantes para qualificar se ele quer ou não comprar um produto.
+    try {
+        let prompt = `Você é um assistente de IA de um CRM, responsável por avaliar as respostas do usuário e qualificar se ele é um lead qualificado ou não qualificado baseado em suas respostas, não fuja do contexto e se limite a perguntas que são interessantes para qualificar se ele quer ou não comprar um produto.
     
     Analise as seguintes respostas e determine se o lead é "qualificado" ou "não qualificado" em seguida um resumo do motivo que levou a tomar essa decisão.
-    1. Nome: ${answers[0]}
-    2. Email: ${answers[1]}
-    3. Interesse: ${answers[2]}
-    4. Pronto para comprar: ${answers[3]}
-    5. Orçamento: ${answers[4]}
+    1. ${questions[0]}: ${answers[0]}
+    2. ${questions[1]}: ${answers[1]}
+    3. ${questions[2]}: ${answers[2]}
+    4. ${questions[3]}: ${answers[3]}
+    5. ${questions[4]}: ${answers[4]}
 
     Responda com "qualificado" ou "não qualificado" em seguida um resumo do motivo que levou a tomar essa decisão.`;
-
-    try {
-        const response = await axios.post('http://localhost:11434/api/generate', {
+        let response = await axios.post('http://localhost:11434/api/generate', {
             model: 'gemma3:1b',
             prompt: prompt,
             stream: false
         });
         console.log('Análise da IA do Ollama:', response.data.response);
-        const result = response.data.response.trim().toLowerCase();
+        let result = response.data.response.trim().toLowerCase();
         return result.includes('não qualificado') ? { status: 'não qualificado', reason: result } : { status: 'qualificado', reason: result };
     } catch (error) {
         console.error('Erro ao qualificar lead:', error);
@@ -122,18 +179,20 @@ async function connectToWhatsApp() {
 
             if (!conversations[from]) {
                 conversations[from] = { step: 0, answers: [], platform: 'whatsapp' };
-                await sock.sendMessage(from, { text: WELCOME_MESSAGE });
-                await askQuestion(sock, from, 0);
+                //await sock.sendMessage(from, { text: WELCOME_MESSAGE });
+                await askQuestion(sock, from, 0, true, text, '');
             } else {
                 conversations[from].answers.push(text);
                 conversations[from].step += 1;
 
                 if (conversations[from].step < 5) {
-                    await askQuestion(sock, from, conversations[from].step);
+                    await askQuestion(sock, from, conversations[from].step, true, text, conversations[from].answers.join(' '));
                 } else {
                     const qualification = await qualifyLead(conversations[from].answers);
-                    const leadData = { phone: from, answers: conversations[from].answers, status: qualification.status, reason: qualification.reason, platform: 'whatsapp' };
-                    saveToJson(leadData);
+                    if (from && conversations[from] && conversations[from].answers) {
+                        const leadData = { phone: from, questions: questions, answers: conversations[from].answers, status: qualification.status, reason: qualification.reason, platform: 'whatsapp' };
+                        saveToJson(leadData);
+                    }
                     await sock.sendMessage(from, {
                         text: qualification.status === 'qualificado' ? LEAD_QUALIFIED_MESSAGE : LEAD_NOT_QUALIFIED_MESSAGE
                     });
@@ -169,8 +228,14 @@ app.post('/chat', async (req, res) => {
         const leadData = { userId, answers: conversations[userId].answers, status: qualification.status, reason: qualification.reason, platform: 'web' };
         saveToJson(leadData);
         delete conversations[userId];
+        let finalMessage = '';
+        if (qualification.status === 'qualificado') {
+            finalMessage = `${LEAD_QUALIFIED_MESSAGE}`;
+        } else {
+            finalMessage = `${LEAD_NOT_QUALIFIED_MESSAGE}`;
+        }
         return res.json({
-            message: qualification.status === 'qualificado' ? LEAD_QUALIFIED_MESSAGE : LEAD_NOT_QUALIFIED_MESSAGE
+            message: finalMessage
         });
     }
 });
