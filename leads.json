@@ -1,7 +1,7 @@
 {
   "leads": [
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "victor",
         "victor@live.com",
@@ -12,7 +12,7 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "hugo",
         "xhugo@live.com",
@@ -23,7 +23,7 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "livia",
         "livia@live.com",
@@ -34,7 +34,7 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "victor",
         "xhugo@live.com",
@@ -45,7 +45,7 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "victor",
         "xg@live.com",
@@ -57,7 +57,7 @@
       "reason": "qualificado\n\nresumo: o usuário demonstra claramente interesse em um produto específico (celta tunado) e está pronto para comprar, indicando um alto potencial de conversão."
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "victor",
         "xhugo@live.com",
@@ -122,7 +122,7 @@
       "platform": "web"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "vitão no whatsapp",
         "vitao@dozap.com",
@@ -133,6 +133,32 @@
       "status": "qualificado",
       "reason": "**qualificado**\n\no lead demonstra interesse claro e concreto em comprar uma casa, indicando um potencial de compra significativo. as informações fornecidas (nome, email e interesse) são relevantes para a qualificação do lead como um potencial cliente.",
       "platform": "whatsapp"
+    },
+    {
+      "userId": "user_om02lr2u1",
+      "answers": [
+        "olá",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "status": "qualificado",
+      "reason": "qualificado\n\nresumo: a resposta indica um interesse claro e a disposição para comprar, o que sugere um lead qualificado.",
+      "platform": "web"
+    },
+    {
+      "userId": "user_0pu08lk5z",
+      "answers": [
+        "olá",
+        "x@live.com",
+        "não tenho interesse",
+        "não quero",
+        "0"
+      ],
+      "status": "não qualificado",
+      "reason": "não qualificado\n\nresumo: a resposta indica explicitamente falta de interesse no produto/serviço, o que é um sinal de que o lead não está pronto para comprar.",
+      "platform": "web"
     }
   ]
 }
