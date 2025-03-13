@@ -13,6 +13,10 @@ O objetivo deste projeto é automatizar o processo de qualificação de leads, u
 - Armazenamento das respostas dos usuários em um arquivo JSON.
 - Qualificação de leads utilizando um modelo de IA.
 
+
+## Branch
+- A versão de codigo do branch auto-generate-questions gera as 5 perguntas de maneira automatica utilizando a IA.
+
 ## Requisitos
 
 - Node.js (versão 14 ou superior)
