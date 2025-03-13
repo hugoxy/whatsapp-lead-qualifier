@@ -3,241 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Moderno</title>
+    <title>Chatbot</title>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: #f0f2f5;
-        }
-
-        /* Botão flutuante maior */
-        #chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-            background: #007bff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        #chat-toggle:hover {
-            transform: scale(1.1);
-            background: #0056b3;
-        }
-
-        /* Estilo do widget */
-        #chat-widget {
-            position: fixed;
-            bottom: 110px;
-            right: 20px;
-            width: 320px;
-            height: 450px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        #chat-header {
-            background: linear-gradient(135deg, #007bff, #00c4ff);
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #chat-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-            border: 2px solid white;
-        }
-
-        #chat-body {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #fafafa;
-        }
-
-        .message {
-            margin: 10px 0;
-            padding: 10px 15px;
-            border-radius: 10px;
-            max-width: 80%;
-            word-wrap: break-word;
-            animation: fadeIn 0.2s ease;
-            white-space: pre-wrap; /* Preserva quebras de linha e espaços */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .user-message {
-            background: #007bff;
-            color: white;
-            align-self: flex-end;
-            margin-left: auto;
-        }
-
-        .bot-message {
-            background: #e9ecef;
-            color: #333;
-            align-self: flex-start;
-        }
-
-        #chat-input {
-            display: flex;
-            padding: 15px;
-            border-top: 1px solid #eee;
-            background: white;
-        }
-
-        #chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            outline: none;
-            font-size: 14px;
-            transition: border 0.3s ease;
-        }
-
-        #chat-input input:focus {
-            border-color: #007bff;
-        }
-
-        #chat-input button {
-            margin-left: 10px;
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        #chat-input button:hover {
-            background: #0056b3;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f0f2f5; }
+        #chat-toggle { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #007bff; border-radius: 50%; color: white; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: all 0.3s; }
+        #chat-toggle:hover { transform: scale(1.1); background: #0056b3; }
+        #chat-widget { position: fixed; bottom: 90px; right: 20px; width: 300px; height: 400px; background: white; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); display: none; flex-direction: column; overflow: hidden; animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        #chat-header { background: linear-gradient(135deg, #007bff, #00c4ff); color: white; padding: 10px; text-align: center; font-size: 16px; font-weight: bold; }
+        #chat-body { flex: 1; padding: 10px; overflow-y: auto; background: #fafafa; }
+        .message { margin: 8px 0; padding: 8px 12px; border-radius: 8px; max-width: 80%; word-wrap: break-word; white-space: pre-wrap; }
+        .user-message { background: #007bff; color: white; margin-left: auto; }
+        .bot-message { background: #e9ecef; color: #333; }
+        #chat-input { display: flex; padding: 10px; border-top: 1px solid #eee; }
+        #chat-input input { flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 16px; outline: none; }
+        #chat-input input:focus { border-color: #007bff; }
+        #chat-input button { margin-left: 8px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 16px; cursor: pointer; }
+        #chat-input button:hover { background: #0056b3; }
     </style>
 </head>
 <body>
-    <!-- Botão flutuante para abrir/fechar o chat -->
     <div id="chat-toggle" onclick="toggleChat()">💬</div>
-
-    <!-- Widget de chat -->
     <div id="chat-widget">
-        <div id="chat-header">
-            <img
-                id="chat-avatar"
-                src="https://randomuser.me/api/portraits/women/44.jpg" // Avatar de exemplo
-                alt="Avatar do Chatbot"
-            />
-            <span>Chatbot Moderno</span>
-        </div>
+        <div id="chat-header">Chatbot</div>
         <div id="chat-body"></div>
         <div id="chat-input">
-            <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+            <input type="text" id="message-input" placeholder="Digite...">
             <button onclick="sendMessage()">Enviar</button>
         </div>
     </div>
 
     <script>
-        const userId = 'user_' + Math.random().toString(36).substr(2, 9); // ID único para o usuário
+        const userId = 'user_' + Math.random().toString(36).substr(2, 9);
         const chatBody = document.getElementById('chat-body');
         const messageInput = document.getElementById('message-input');
 
-        // Função para adicionar mensagem ao chat
-        function addMessage(text, isUser = false) {
+        function addMessage(text, isUser) {
             const div = document.createElement('div');
-            div.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
-            div.textContent = text; // Usamos textContent, mas com white-space: pre-wrap no CSS
+            div.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            div.textContent = text;
             chatBody.appendChild(div);
             chatBody.scrollTop = chatBody.scrollHeight;
         }
 
-        // Função para enviar mensagem ao backend
         async function sendMessage() {
             const message = messageInput.value.trim();
             if (!message) return;
-
             addMessage(message, true);
             messageInput.value = '';
-
             try {
-                const response = await fetch('http://localhost:3000/chat', {
+                const res = await fetch('http://localhost:3000/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userId, message })
                 });
-                const data = await response.json();
+                const data = await res.json();
                 addMessage(data.message);
-            } catch (error) {
-                console.error('Erro ao enviar mensagem:', error);
-                addMessage('Erro ao enviar mensagem. Tente novamente.');
+            } catch (e) {
+                addMessage('Erro ao enviar.');
             }
         }
 
-        // Iniciar o chat automaticamente
         (async () => {
             try {
-                const response = await fetch('http://localhost:3000/chat', {
+                const res = await fetch('http://localhost:3000/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userId, message: '' })
                 });
-                const data = await response.json();
+                const data = await res.json();
                 addMessage(data.message);
-            } catch (error) {
-                console.error('Erro ao iniciar o chat:', error);
-                addMessage('Erro ao iniciar o chat. Tente novamente.');
+            } catch (e) {
+                addMessage('Erro ao iniciar.');
             }
         })();
 
-        // Enviar mensagem com Enter
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-
-        // Função para abrir/fechar o widget
+        messageInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
-            const toggle = document.getElementById('chat-toggle');
-            if (widget.style.display === 'flex') {
-                widget.style.display = 'none';
-                toggle.style.transform = 'scale(1)';
-            } else {
-                widget.style.display = 'flex';
-                toggle.style.transform = 'scale(0.9)';
-            }
+            widget.style.display = widget.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </body>

@@ -1,10 +1,10 @@
 {
   "leads": [
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
-        "victor",
-        "victor@live.com",
+        "X",
+        "X@live.com",
         "quero muito comprar um carro",
         "sim, sempre estou pronto",
         "100000 mil"
@@ -12,10 +12,10 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
-        "hugo",
-        "xhugo@live.com",
+        "X",
+        "X@live.com",
         "carros",
         "sim",
         "50mil"
@@ -23,7 +23,7 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "livia",
         "livia@live.com",
@@ -34,10 +34,10 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
-        "victor",
-        "xhugo@live.com",
+        "X",
+        "X@live.com",
         "comprar o carro top, um camaro",
         "estou sim",
         "mais de 100mil"
@@ -45,9 +45,9 @@
       "status": "qualificado"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
-        "victor",
+        "X",
         "xg@live.com",
         "comprar um celta tunado",
         "estou sim",
@@ -57,16 +57,16 @@
       "reason": "qualificado\n\nresumo: o usuário demonstra claramente interesse em um produto específico (celta tunado) e está pronto para comprar, indicando um alto potencial de conversão."
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
-        "victor",
-        "xhugo@live.com",
+        "X",
+        "X@live.com",
         "motos",
         "sim",
         "10mil"
       ],
       "status": "qualificado",
-      "reason": "qualificado\n\nresumo: o usuário, victor, demonstra interesse em motos e está pronto para comprar, indicando um alto potencial de conversão.",
+      "reason": "qualificado\n\nresumo: o usuário, X, demonstra interesse em motos e está pronto para comprar, indicando um alto potencial de conversão.",
       "platform": "whatsapp"
     },
     {
@@ -111,7 +111,7 @@
     {
       "userId": "user_n8niv39bx",
       "answers": [
-        "victor",
+        "X",
         "xh@live.com",
         "em nada",
         "não, to suave",
@@ -122,7 +122,7 @@
       "platform": "web"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "vitão no whatsapp",
         "vitao@dozap.com",
@@ -219,7 +219,7 @@
       "platform": "whatsapp"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "vitão",
         "vitao@live.com",
@@ -245,7 +245,7 @@
       "platform": "whatsapp"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "vitasso",
         "vitasso@turbo.com",
@@ -271,7 +271,7 @@
       "platform": "web"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "quero muito comprar um veiculo para levar meu filho pra escola",
         "meu antigo está muito ruim",
@@ -284,7 +284,7 @@
       "platform": "whatsapp"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "answers": [
         "vamos",
         "100mil",
@@ -297,7 +297,7 @@
       "platform": "whatsapp"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "questions": [
         "Olá! Seja bem-vindo(a) à nossa loja de carros. É um prazer te atender. Para começarmos a entender melhor suas necessidades, poderia me dizer, qual o seu objetivo ao procurar um carro novo?",
         "Ótimo! Para começarmos a entender melhor suas necessidades, qual a sua principal prioridade ao trocar o seu carro antigo? Você está buscando algo específico, como economia de combustível, segurança, espaço ou algo mais?",
@@ -317,7 +317,7 @@
       "platform": "whatsapp"
     },
     {
-      "phone": "553175705747@s.whatsapp.net",
+      "phone": "X@s.whatsapp.net",
       "questions": [
         "Olá! Seja bem-vindo(a) à nossa loja de carros. Para começarmos a entender melhor suas necessidades e te ajudar a encontrar o carro ideal, gostaria de fazer algumas perguntas. 😊\n\nPrimeiro, qual o seu principal objetivo ao procurar um carro novo?",
         "Ótimo! Vamos começar com a primeira pergunta.\n\nQual a sua faixa de preço que você está considerando para um carro novo?",
